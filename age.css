@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e5c87e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* Ensures the content is vertically centered */
+    margin: 0;
+}
+
+.container {
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    background: linear-gradient(orange, green);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px; /* Max width for desktop */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;  /* Make input and button full-width on smaller screens */
+    max-width: 100%;  /* Prevents overflow on large screens */
+    box-sizing: border-box;
+}
+
+button {
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(117, 222, 230);
+}
+
+button:hover {
+    background-color: rgb(78, 78, 236);
+    color: white;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Media Query for small devices (Mobile) */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 100%;
+        max-width: 90%;  /* Allow more room on smaller screens */
+    }
+
+    input, button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+}
